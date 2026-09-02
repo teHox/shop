@@ -1,0 +1,1 @@
+export const mobileMediaWidth = "(max-width: 768px)";

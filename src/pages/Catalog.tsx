@@ -1,6 +1,6 @@
 import { FC, memo } from "react";
 import MainLayout from "../layout/MainLayout.tsx";
-import BannerMobile from "../components/banner/BannerMobile.tsx";
+import BannerMobile from "../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";
 import Categories from "../components/categories/Categories.tsx";
 
