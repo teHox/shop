@@ -1,9 +1,9 @@
-import { FC, memo } from "react";
+import { FC } from "react";
 import MainLayout from "../../layout/MainLayout.tsx";
 import Banner from "./components/Banner/Banner.tsx";
 import BannerMobile from "../../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";
-import Catalog from "../../components/catalog/Catalog.tsx";
+import Catalog from "./components/Catalog/Catalog.tsx";
 import { mobileMediaWidth } from "../../constants/constants.ts";
 
 const HomePage: FC = () => {
@@ -27,4 +27,4 @@ const HomePage: FC = () => {
     );
 };
 
-export default memo(HomePage);
+export default HomePage;

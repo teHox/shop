@@ -1,0 +1,46 @@
+.bannerMobile {
+    display: none;
+    overflow: unset;
+    margin-bottom: 20px;
+    :global {
+        .swiper-pagination-bullet {
+            width: 5px;
+            height: 5px;
+            background: #ffffffff;
+            border: 1px solid #98a8f8ff;
+            opacity: 1;
+            &-active {
+                background: #98a8f8ff;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        display: block;
+    }
+    @media (max-width: 530px) {
+        :global {
+            .swiper-pagination {
+                text-align: right;
+            }
+            .swiper-pagination-bullets {
+                bottom: 10px;
+                left: unset;
+                right: 30px;
+            }
+        }
+    }
+}
+
+.bannerMobileSlide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 24px;
+    background: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    color: #aba9a7;
+}

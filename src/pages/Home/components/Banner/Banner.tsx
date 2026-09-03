@@ -1,4 +1,4 @@
-import { FC, memo } from "react";
+import { FC } from "react";
 import styles from "./styles.module.scss";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import Recommendation from "../Recommendation/Recommendation.tsx";
@@ -44,4 +44,4 @@ const Banner: FC = () => {
     );
 };
 
-export default memo(Banner);
+export default Banner;
