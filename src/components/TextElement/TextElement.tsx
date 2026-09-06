@@ -5,7 +5,8 @@ import { textTypes } from "../../constants/constants.ts";
 
 type TextElementProps = {
     isMobile?: boolean;
-    content: string;
+    content: string | number;
+    hover?: boolean;
     type?: string;
     className?: string;
 };
@@ -14,6 +15,7 @@ const TextElement: FC<TextElementProps> = ({
     content,
     isMobile = false,
     type = textTypes.text,
+    hover = false,
     className,
 }) => {
     return (
@@ -22,6 +24,7 @@ const TextElement: FC<TextElementProps> = ({
                 {
                     [styles.textMobile]: isMobile,
                     [styles.text]: type === textTypes.text,
+                    [styles.textHover]: hover,
                     [styles.small]: type === textTypes.small,
                     [styles.medium]: type === textTypes.medium,
                     [styles.mediumMobile]: type === textTypes.medium && isMobile,

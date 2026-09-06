@@ -30,8 +30,8 @@ const Banner: FC = () => {
                     </button>
                 </div>
             </div>
-            {bannerItems.map((item) => (
-                <div className={styles.item}>
+            {bannerItems.map((item, index) => (
+                <div className={styles.item} key={index}>
                     <div>
                         <span className={styles.bannerTitle}>{item.title}</span>
                         <TextElement content={item.description} />

@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.modals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.contact,
+.basket {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 10px;
+    }
+}
+
+.basket {
+    padding-right: 6px;
+}
+
+.counts {
+    position: relative;
+    margin-left: 10px;
+    svg {
+        margin-right: 0;
+    }
+}
+
+.count {
+    position: absolute;
+    top: -6px;
+    right: -5px;
+}

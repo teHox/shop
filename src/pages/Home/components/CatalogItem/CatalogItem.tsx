@@ -4,8 +4,13 @@ import styles from "./styles.module.scss";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import { textTypes } from "../../../../constants/constants.ts";
 import EventSvg from "../../svg/EventSvg.tsx";
+import { CatalogItemType } from "../../../../constants/types.ts";
 
-const CatalogItem: FC = () => {
+type CatalogItemProps = {
+    item: CatalogItemType;
+};
+
+const CatalogItem: FC<CatalogItemProps> = ({ item }) => {
     return (
         <Link to="/product" className={styles.item}>
             <div className={styles.event}>
@@ -13,17 +18,17 @@ const CatalogItem: FC = () => {
                 <TextElement content="Топ продажів" type={textTypes.small} />
             </div>
             <div className={styles.img}>
-                <img src="img/catalog__item.png" alt="" />
+                <img src={item.image} alt="" />
             </div>
-            <TextElement
-                content="М'яка іграшка копіца патріотичний заєць"
-                className={styles.name}
-            />
+            <TextElement content={item.name} className={styles.name} />
             <div className={styles.bottom}>
                 <div className={styles.price}>
-                    <TextElement content="915 ₴" className={styles.priceOld} />
                     <TextElement
-                        content="515 ₴"
+                        content={item.priceOld + " ₴"}
+                        className={styles.priceOld}
+                    />
+                    <TextElement
+                        content={item.price + " ₴"}
                         className={styles.priceNew}
                         type={textTypes.big}
                     />

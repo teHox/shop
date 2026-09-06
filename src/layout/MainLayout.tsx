@@ -4,6 +4,7 @@ import PopupConsultation from "../components/popups/PopupConsultation.tsx";
 import PopupBasket from "../components/popups/PopupBasket.tsx";
 import Footer from "../components/footer/Footer.tsx";
 import { useMediaQuery } from "react-responsive";
+import { mobileMediaWidth } from "../constants/constants.ts";
 
 type TypeMainLayout = {
     children: ReactNode;
@@ -11,7 +12,7 @@ type TypeMainLayout = {
 
 const MainLayout: FC<TypeMainLayout> = ({ children }) => {
     const isMobile = useMediaQuery({
-        query: "(max-width: 768px)",
+        query: mobileMediaWidth,
     });
     const [consultationActive, setConsultationActive] = useState(false);
     const [basketActive, setBasketActive] = useState(false);
