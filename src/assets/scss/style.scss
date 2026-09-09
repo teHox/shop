@@ -31,29 +31,6 @@ body {
     }
 }
 
-.line {
-    position: fixed;
-    height: 100%;
-    width: 2px;
-    background: $primary-color;
-    left: 10px;
-    top: 0;
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-
-.container {
-    max-width: 1140px;
-    padding: 0 20px 20px 20px;
-    width: 100%;
-    margin: 0 auto;
-    @media (max-width: 768px) {
-        overflow: hidden;
-        padding: 30px 20px 80px 20px;
-    }
-}
-
 .text {
     font-size: $fz-text;
     font-weight: $fw-big;
@@ -105,126 +82,8 @@ body {
     color: $text-color;
 }
 
-// POP-UP CONSULTATION
-
-.popup-consultation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    backdrop-filter: blur(2px);
-    @include transition;
-    &_active {
-        top: 0;
-        z-index: 20;
-        opacity: 1;
-    }
-    &__body {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 800px;
-        width: 100%;
-    }
-    &__content {
-        @include flex(space-between);
-        position: relative;
-        max-height: fit-content;
-        width: 100%;
-        background: $contrast-color;
-        border: 1px solid $primary-color;
-        padding: 65px 85px;
-        border-radius: 5px;
-    }
-    &__close {
-        @include flex;
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        width: 16px;
-        height: 16px;
-        background: transparent;
-        border-left: 1px solid $primary-color;
-        border-bottom: 1px solid $primary-color;
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 5px;
-        cursor: pointer;
-    }
-    &__left {
-        max-width: 200px;
-        width: 100%;
-        .text {
-            font-weight: $fw-small;
-            margin-bottom: 10px;
-            &:first-child {
-                margin-bottom: 35px;
-            }
-        }
-        .medium {
-            margin-bottom: 20px;
-        }
-    }
-    &__last {
-        margin-bottom: 35px !important;
-        color: $primary-color;
-    }
-    &__icons {
-        display: flex;
-        gap: 11px;
-    }
-    &__telegram {
-        width: 18px;
-        height: 20px;
-        background: url(../img/contact__telegram.png) no-repeat center center;
-    }
-    &__right {
-        max-width: 305px;
-        width: 100%;
-        form {
-            @include flex($flex-direction: column, $align-items: end);
-        }
-        .text {
-            margin-bottom: 40px;
-        }
-        input,
-        textarea {
-            width: 100%;
-            background: $contrast-color;
-            padding-bottom: 7px;
-            font-size: $fw-small;
-            font-weight: $fw-small;
-            border-bottom: 1px solid $primary-color;
-            color: $text-color-light;
-            margin-bottom: 40px;
-            &::placeholder {
-                color: $text-color-light;
-            }
-        }
-        textarea {
-            resize: none;
-            margin-bottom: 20px;
-            border: 0;
-            padding: 0;
-        }
-        input[type="button"] {
-            max-width: 90px;
-            margin-left: auto;
-            margin-bottom: 0;
-            color: $primary-color;
-            font-weight: $fw-big;
-            cursor: pointer;
-        }
-    }
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-
 .consultation {
+    display: none;
     @media (max-width: 768px) {
         display: block;
         position: relative;
@@ -233,6 +92,7 @@ body {
         z-index: 1;
         opacity: 1;
         &__content {
+            display: flex;
             flex-direction: column;
             align-items: baseline;
             gap: 20px;
@@ -244,6 +104,7 @@ body {
         &__left {
             max-width: unset;
             .text {
+                margin-bottom: 10px;
                 &:first-child {
                     margin-bottom: 20px;
                 }
@@ -252,17 +113,22 @@ body {
                 margin-bottom: 10px;
             }
         }
+        &__icons {
+            display: flex;
+            gap: 11px;
+        }
         &__last {
             margin-bottom: 20px !important;
+        }
+        &__telegram {
+            width: 18px;
+            height: 20px;
+            background: url(../img/contact__telegram.png) no-repeat center center;
         }
         &__right {
             max-width: unset;
             .text {
                 margin-bottom: 20px;
-            }
-            input,
-            textarea {
-                background: $body-color-mobile;
             }
             input[type="button"] {
                 max-width: unset;
@@ -274,6 +140,32 @@ body {
                 background: $primary-color;
                 border: 0;
                 border-radius: 5px;
+                font-weight: $fw-big;
+                cursor: pointer;
+            }
+            width: 100%;
+            form {
+                @include flex($flex-direction: column, $align-items: end);
+            }
+            input,
+            textarea {
+                width: 100%;
+                background: $body-color-mobile;
+                padding-bottom: 7px;
+                font-size: $fw-small;
+                font-weight: $fw-small;
+                border-bottom: 1px solid $primary-color;
+                color: $text-color-light;
+                margin-bottom: 40px;
+                &::placeholder {
+                    color: $text-color-light;
+                }
+            }
+            textarea {
+                resize: none;
+                margin-bottom: 20px;
+                border: 0;
+                padding: 0;
             }
         }
     }

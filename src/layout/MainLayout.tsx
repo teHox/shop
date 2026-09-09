@@ -1,10 +1,11 @@
 import { FC, ReactNode, useState } from "react";
 import Header from "../components/header/Header.tsx";
-import PopupConsultation from "../components/popups/PopupConsultation.tsx";
 import PopupBasket from "../components/popups/PopupBasket.tsx";
 import Footer from "../components/footer/Footer.tsx";
 import { useMediaQuery } from "react-responsive";
 import { mobileMediaWidth } from "../constants/constants.ts";
+import styles from "./styles.module.scss";
+import ConsultationModal from "./components/ConsultationModal/ConsultationModal.tsx";
 
 type TypeMainLayout = {
     children: ReactNode;
@@ -21,8 +22,8 @@ const MainLayout: FC<TypeMainLayout> = ({ children }) => {
 
     return (
         <div>
-            <div className="line"></div>
-            <div className="container">
+            <div className={styles.line}></div>
+            <div className={styles.container}>
                 {isMobile || (
                     <Header
                         setConsultationActive={setConsultationActive}
@@ -31,7 +32,7 @@ const MainLayout: FC<TypeMainLayout> = ({ children }) => {
                         setBasketActive={setBasketActive}
                     />
                 )}
-                <PopupConsultation
+                <ConsultationModal
                     isVisible={isVisibleConsultation}
                     setIsVisible={setIsVisibleConsultation}
                     consultationActive={consultationActive}

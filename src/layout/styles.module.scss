@@ -1,0 +1,22 @@
+.container {
+    max-width: 1140px;
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        overflow: hidden;
+        padding: 30px 20px 80px 20px;
+    }
+}
+
+.line {
+    position: fixed;
+    height: 100%;
+    width: 2px;
+    background: #98a8f8;
+    left: 10px;
+    top: 0;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
