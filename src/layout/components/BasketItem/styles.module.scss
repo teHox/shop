@@ -1,0 +1,49 @@
+.item {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 65px));
+}
+
+.img {
+    grid-row: span 2 / span 2;
+}
+
+.name {
+    grid-column: span 2 / span 2;
+}
+
+.id {
+    font-weight: 400;
+    text-align: right;
+}
+
+.delete {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    grid-column-start: 4;
+}
+
+.count {
+    font-weight: 400;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+.priceOld {
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.priceNew {
+    color: #000000;
+}

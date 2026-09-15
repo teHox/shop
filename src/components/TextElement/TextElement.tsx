@@ -9,6 +9,7 @@ type TextElementProps = {
     hover?: boolean;
     type?: string;
     className?: string;
+    onClick?: () => void;
 };
 
 const TextElement: FC<TextElementProps> = ({
@@ -17,9 +18,11 @@ const TextElement: FC<TextElementProps> = ({
     type = textTypes.text,
     hover = false,
     className,
+    onClick,
 }) => {
     return (
         <p
+            onClick={onClick}
             className={clsx(
                 {
                     [styles.textMobile]: isMobile,

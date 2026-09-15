@@ -171,193 +171,6 @@ body {
     }
 }
 
-// BASKET
-
-.popup-basket {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    backdrop-filter: blur(2px);
-    @include transition;
-    &_active {
-        top: 0;
-        opacity: 1;
-        z-index: 20;
-    }
-    &__body {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 800px;
-        width: 100%;
-    }
-    &__content {
-        position: relative;
-        max-height: fit-content;
-        width: 100%;
-        background: $contrast-color;
-        border: 1px solid $primary-color;
-        padding: 45px 85px 30px;
-        border-radius: 5px;
-    }
-    &__catalog {
-        height: 200px;
-        overflow-y: scroll;
-        width: 100%;
-        padding-left: 30px;
-        padding-top: 10px;
-        margin-bottom: 40px;
-        direction: rtl;
-        div {
-            direction: ltr;
-        }
-        &::-webkit-scrollbar {
-            width: 5px;
-            background: rgba(152, 168, 248, 0.5);
-            border-radius: 5px;
-            padding-right: 1px;
-        }
-        &::-webkit-scrollbar-track {
-            border-radius: 5px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: $primary-color;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            width: 7px;
-        }
-    }
-    &__item {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: repeat(3, minmax(0, 65px));
-    }
-    &__img {
-        grid-row: span 2 / span 2;
-    }
-    &__name {
-        grid-column: span 2 / span 2;
-    }
-    &__id {
-        font-weight: $fw-small;
-        text-align: right;
-    }
-    input,
-    textarea {
-        outline: none;
-        padding: 10px;
-    }
-    input[type="button"] {
-        -webkit-appearance: button;
-        cursor: pointer;
-    }
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-    .input-group {
-        display: flex;
-        clear: both;
-        position: relative;
-        input[type="button"] {
-            background-color: $contrast-color;
-            min-width: 20px;
-            width: auto;
-            transition: all 300ms ease;
-        }
-        .button-minus,
-        .button-plus {
-            font-weight: bold;
-            height: 20px;
-            padding: 0;
-            width: 20px;
-            font-size: $fz-medium;
-            color: $text-color;
-            position: relative;
-        }
-        .quantity-field {
-            position: relative;
-            height: 20px;
-            left: -6px;
-            text-align: center;
-            width: 38px;
-            font-size: $fz-medium;
-            color: $black-color;
-            margin: 0 0 5px;
-            resize: vertical;
-            background: $contrast-color;
-        }
-        .button-plus {
-            left: -13px;
-        }
-        input[type="number"] {
-            -moz-appearance: textfield;
-            -webkit-appearance: none;
-        }
-    }
-    &__per-item {
-        font-weight: $fw-small;
-    }
-    &__delate {
-        display: flex;
-        justify-content: flex-end;
-        cursor: pointer;
-        grid-column-start: 4;
-    }
-    &__count {
-        font-weight: $fw-small;
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 3;
-    }
-    &__price {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        grid-column-start: 4;
-        grid-row-start: 3;
-    }
-    &__old {
-        text-decoration: line-through;
-        font-weight: $fw-small;
-    }
-    &__new {
-        color: $black-color;
-    }
-    &__total-price {
-        @include flex(flex-end);
-        text-align: right;
-        margin-bottom: 35px;
-        .big {
-            color: $black-color;
-            margin-left: 30px;
-        }
-    }
-    &__buttons {
-        @include flex(flex-end);
-    }
-    &__close {
-        cursor: pointer;
-        color: $primary-color;
-        margin: 30px;
-    }
-    &__buy {
-        background: $primary-color;
-        border: $primary-color;
-        border-radius: 5px;
-        color: $contrast-color;
-        padding: 15px 65px;
-    }
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-
 .basket {
     @media (max-width: 768px) {
         display: block;
@@ -377,6 +190,30 @@ body {
         }
         &__catalog {
             height: 480px;
+            overflow-y: scroll;
+            width: 100%;
+            padding-left: 30px;
+            padding-top: 10px;
+            margin-bottom: 40px;
+            direction: rtl;
+            div {
+                direction: ltr;
+            }
+            &::-webkit-scrollbar {
+                width: 5px;
+                background: rgba(152, 168, 248, 0.5);
+                border-radius: 5px;
+                padding-right: 1px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $primary-color;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                width: 7px;
+            }
         }
         &__item {
             grid-template-rows: repeat(3, minmax(0, 30px));
@@ -435,11 +272,60 @@ body {
         }
         &__buy {
             width: 100%;
+            background: $primary-color;
+            border: $primary-color;
+            border-radius: 5px;
+            color: $contrast-color;
+            padding: 15px 65px;
         }
-    }
-    .popup-basket__total-price {
-        .big {
-            margin-left: 15px;
+        &__total-price {
+            @include flex(flex-end);
+            text-align: right;
+            margin-bottom: 35px;
+            .big {
+                color: $black-color;
+                margin-left: 15px;
+            }
+        }
+        .input-group {
+            display: flex;
+            clear: both;
+            position: relative;
+            input[type="button"] {
+                background-color: $contrast-color;
+                min-width: 20px;
+                width: auto;
+                transition: all 300ms ease;
+            }
+            .button-minus,
+            .button-plus {
+                font-weight: bold;
+                height: 20px;
+                padding: 0;
+                width: 20px;
+                font-size: $fz-medium;
+                color: $text-color;
+                position: relative;
+            }
+            .quantity-field {
+                position: relative;
+                height: 20px;
+                left: -6px;
+                text-align: center;
+                width: 38px;
+                font-size: $fz-medium;
+                color: $black-color;
+                margin: 0 0 5px;
+                resize: vertical;
+                background: $contrast-color;
+            }
+            .button-plus {
+                left: -13px;
+            }
+            input[type="number"] {
+                -moz-appearance: textfield;
+                -webkit-appearance: none;
+            }
         }
     }
 }

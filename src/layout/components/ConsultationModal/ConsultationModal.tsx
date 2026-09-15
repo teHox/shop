@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { FaInstagram, FaViber, FaWhatsapp } from "react-icons/fa";
 import Modal from "../../../components/Modal/Modal.tsx";
-import TelegramSvg from "../../../components/header/svg/TelegramSvg/TelegramSvg.tsx";
+import TelegramSvg from "../../../assets/svg/TelegramSvg/TelegramSvg.tsx";
 import styles from "./styles.module.scss";
 import TextElement from "../../../components/TextElement/TextElement.tsx";
 import { textTypes } from "../../../constants/constants.ts";
