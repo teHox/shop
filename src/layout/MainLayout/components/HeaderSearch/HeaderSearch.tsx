@@ -1,4 +1,4 @@
-import HeaderSearchSvg from "../HeaderTop/svg/HeaderSearchSvg.tsx";
+import HeaderSearchSvg from "../../svg/HeaderSearchSvg.tsx";
 import styles from "./styles.module.scss";
 
 const HeaderSearch = () => {

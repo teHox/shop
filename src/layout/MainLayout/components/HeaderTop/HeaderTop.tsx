@@ -1,12 +1,12 @@
 import { Dispatch, FC, SetStateAction } from "react";
-import HeaderPhoneSvg from "./svg/HeaderPhoneSvg.tsx";
-import HeaderBasketSvg from "./svg/HeaderBasketSvg.tsx";
-import HeaderInfoSvg from "./svg/HeaderInfoSvg.tsx";
+import HeaderPhoneSvg from "../../svg/HeaderPhoneSvg.tsx";
+import HeaderBasketSvg from "../../svg/HeaderBasketSvg.tsx";
+import HeaderInfoSvg from "../../svg/HeaderInfoSvg.tsx";
 import HeaderSearch from "../HeaderSearch/HeaderSearch.tsx";
 
 import styles from "./style.module.scss";
-import TextElement from "../../../components/TextElement/TextElement.tsx";
-import { textTypes } from "../../../constants/constants.ts";
+import TextElement from "../../../../components/TextElement/TextElement.tsx";
+import { textTypes } from "../../../../constants/constants.ts";
 
 type HeaderTopProps = {
     setIsVisibleConsultation: Dispatch<SetStateAction<boolean>>;

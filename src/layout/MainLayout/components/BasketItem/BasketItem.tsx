@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
 import styles from "./styles.module.scss";
-import TextElement from "../../../components/TextElement/TextElement.tsx";
-import Counter from "../../../components/Counter/Counter.tsx";
-import { textTypes } from "../../../constants/constants.ts";
+import TextElement from "../../../../components/TextElement/TextElement.tsx";
+import Counter from "../../../../components/Counter/Counter.tsx";
+import { textTypes } from "../../../../constants/constants.ts";
 
 const BasketItem: FC = () => {
     const [quantity, setQuantity] = useState<number>(1);

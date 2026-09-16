@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MainLayout from "../../layout/MainLayout.tsx";
+import MainLayout from "../../layout/MainLayout/MainLayout.tsx";
 import Banner from "./components/Banner/Banner.tsx";
 import BannerMobile from "../../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";

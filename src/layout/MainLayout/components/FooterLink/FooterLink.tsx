@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { FooterLinkType } from "../../../constants/types.ts";
+import { FooterLinkType } from "../../../../constants/types.ts";
 import { FC } from "react";
 import styles from "./styles.module.scss";
-import TextElement from "../../../components/TextElement/TextElement.tsx";
+import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import clsx from "clsx";
 
 type FooterLinkProps = {

@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import MainLayout from "../layout/MainLayout.tsx";
+import MainLayout from "../layout/MainLayout/MainLayout.tsx";
 import ProductTips from "../components/product/ProductTips.tsx";
 import ProductPurchase from "../components/product/ProductPurchase.tsx";
 

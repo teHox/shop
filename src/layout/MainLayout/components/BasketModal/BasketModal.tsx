@@ -1,9 +1,9 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import PopupBasketItem from "../BasketItem/BasketItem.tsx";
-import Modal from "../../../components/Modal/Modal.tsx";
+import Modal from "../../../../components/Modal/Modal.tsx";
 import styles from "./styles.module.scss";
-import TextElement from "../../../components/TextElement/TextElement.tsx";
-import { textTypes } from "../../../constants/constants.ts";
+import TextElement from "../../../../components/TextElement/TextElement.tsx";
+import { textTypes } from "../../../../constants/constants.ts";
 
 type BasketModalProps = {
     isVisible: boolean;

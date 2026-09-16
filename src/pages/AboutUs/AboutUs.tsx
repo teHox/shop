@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MainLayout from "../../layout/MainLayout.tsx";
+import MainLayout from "../../layout/MainLayout/MainLayout.tsx";
 import AboutUsMapSvg from "./svg/AboutUsMapSvg.tsx";
 import styles from "./styles.module.scss";
 import TextElement from "../../components/TextElement/TextElement.tsx";

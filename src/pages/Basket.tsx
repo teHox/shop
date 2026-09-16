@@ -1,5 +1,5 @@
 import { FC } from "react";
-import MainLayout from "../layout/MainLayout.tsx";
+import MainLayout from "../layout/MainLayout/MainLayout.tsx";
 import BasketItem from "../components/basket/BasketItem.tsx";
 import { useMediaQuery } from "react-responsive";
 
