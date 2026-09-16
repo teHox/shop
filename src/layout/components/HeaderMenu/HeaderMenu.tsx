@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./styles.module.scss";
-import TextElement from "../TextElement/TextElement.tsx";
 import clsx from "clsx";
+import TextElement from "../../../components/TextElement/TextElement.tsx";
 import BurgerBtn from "../BurgerBtn/BurgerBtn.tsx";
 
 const menuList = [

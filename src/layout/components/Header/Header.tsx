@@ -3,7 +3,7 @@ import HeaderTop from "../HeaderTop/HeaderTop.tsx";
 import HeaderMenu from "../HeaderMenu/HeaderMenu.tsx";
 import HeaderEventSvg from "./svg/HeaderEventSvg.tsx";
 import styles from "./styles.module.scss";
-import TextElement from "../TextElement/TextElement.tsx";
+import TextElement from "../../../components/TextElement/TextElement.tsx";
 
 type HeaderProps = {
     setIsVisibleConsultation: Dispatch<SetStateAction<boolean>>;

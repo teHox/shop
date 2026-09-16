@@ -1,11 +1,11 @@
 import { FC, ReactNode, useState } from "react";
-import Footer from "../components/Footer/Footer.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 import { useMediaQuery } from "react-responsive";
 import { mobileMediaWidth } from "../constants/constants.ts";
 import styles from "./styles.module.scss";
 import ConsultationModal from "./components/ConsultationModal/ConsultationModal.tsx";
 import BasketModal from "./components/BasketModal/BasketModal.tsx";
-import Header from "../components/Header/Header.tsx";
+import Header from "./components/Header/Header.tsx";
 
 type TypeMainLayout = {
     children: ReactNode;

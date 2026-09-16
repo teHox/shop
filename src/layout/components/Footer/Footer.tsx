@@ -1,7 +1,7 @@
 import { FC } from "react";
 import FooterLink from "../FooterLink/FooterLink.tsx";
 import styles from "./styles.module.scss";
-import { footerLinks } from "../../constants/constants.ts";
+import { footerLinks } from "../../../constants/constants.ts";
 
 const Footer: FC = () => {
     return (
