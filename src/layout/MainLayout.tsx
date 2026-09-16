@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from "react";
-import Footer from "../components/footer/Footer.tsx";
+import Footer from "../components/Footer/Footer.tsx";
 import { useMediaQuery } from "react-responsive";
 import { mobileMediaWidth } from "../constants/constants.ts";
 import styles from "./styles.module.scss";

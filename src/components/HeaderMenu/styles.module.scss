@@ -46,6 +46,7 @@
     right: 0;
     max-height: 0;
     transition: max-height 0.5s ease;
+    border-bottom-left-radius: 5px;
     &::-webkit-scrollbar {
         width: 5px;
         background: rgba(152, 168, 248, 0.5);

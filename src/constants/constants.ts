@@ -6,3 +6,31 @@ export const textTypes = {
     medium: "medium",
     big: "big",
 };
+
+export const footerLinks = [
+    {
+        title: "Головна",
+        svg: "home",
+        path: "/",
+    },
+    {
+        title: "Зв`язок",
+        svg: "contact",
+        path: "/consultation",
+    },
+    {
+        title: "Кошик",
+        svg: "basket",
+        path: "/basket",
+    },
+    {
+        title: "Каталог",
+        svg: "catalog",
+        path: "/catalog",
+    },
+    {
+        title: "Більше",
+        svg: "more",
+        path: "/about-us",
+    },
+];
