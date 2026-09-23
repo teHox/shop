@@ -33,6 +33,7 @@ const TextElement: FC<TextElementProps> = ({
                     [styles.mediumMobile]: type === textTypes.medium && isMobile,
                     [styles.big]: type === textTypes.big,
                     [styles.bigMobile]: type === textTypes.big && isMobile,
+                    [styles.title]: type === textTypes.title,
                 },
                 className
             )}>

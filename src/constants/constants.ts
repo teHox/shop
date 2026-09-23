@@ -5,6 +5,7 @@ export const textTypes = {
     text: "text",
     medium: "medium",
     big: "big",
+    title: "title",
 };
 
 export const footerLinks = [
