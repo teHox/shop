@@ -1,0 +1,83 @@
+.consultation {
+    display: block;
+    position: relative;
+    top: unset;
+    left: unset;
+    z-index: 1;
+    opacity: 1;
+    @media (min-width: 769px) {
+        display: none;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    background: #f9faff;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.contact {
+    max-width: unset;
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+.textMB {
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    gap: 11px;
+}
+
+.form {
+    max-width: unset;
+    width: 100%;
+    input[type="button"] {
+        max-width: unset;
+        width: 100%;
+        padding: 13px 0;
+        margin-left: unset;
+        margin-bottom: 0;
+        color: #faf7f0;
+        background: #98a8f8;
+        border: 0;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+    input,
+    textarea {
+        width: 100%;
+        background: #f9faff;
+        padding-bottom: 7px;
+        font-size: 10px;
+        font-weight: 400;
+        border-bottom: 1px solid #98a8f8;
+        color: #aba9a7;
+        margin-bottom: 40px;
+        &::placeholder {
+            color: #aba9a7;
+        }
+    }
+    textarea {
+        resize: none;
+        margin-bottom: 20px;
+        border: 0;
+        padding: 0;
+    }
+}

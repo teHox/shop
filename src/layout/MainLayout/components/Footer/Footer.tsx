@@ -10,7 +10,7 @@ const Footer: FC = () => {
                 <FooterLink link={footerLinks[0]} />
                 <div className={styles.content}>
                     {footerLinks.slice(1, -1).map((link) => (
-                        <FooterLink link={link} />
+                        <FooterLink link={link} key={link.path} />
                     ))}
                 </div>
                 <FooterLink link={footerLinks[footerLinks.length - 1]} />
