@@ -1,0 +1,53 @@
+.group {
+    display: flex;
+    clear: both;
+    position: relative;
+    input[type="button"] {
+        background-color: #faf7f0;
+        min-width: 20px;
+        width: auto;
+        transition: all 300ms ease;
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+.buttonMinus,
+.buttonPlus {
+    font-weight: bold;
+    height: 20px;
+    padding: 0;
+    width: 20px;
+    font-size: 16px;
+    color: #7d7b78;
+    position: relative;
+}
+
+.quantityField {
+    position: relative;
+    height: 20px;
+    left: -6px;
+    text-align: center;
+    width: 38px;
+    font-size: 16px;
+    color: #000000;
+    margin: 0 0 5px;
+    resize: vertical;
+    background: #faf7f0;
+}
+
+.buttonPlus {
+    left: -13px;
+}
+
+.text {
+    font-weight: 400;
+}

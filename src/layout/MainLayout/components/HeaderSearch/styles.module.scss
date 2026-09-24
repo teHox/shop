@@ -1,0 +1,36 @@
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 220px;
+    width: 100%;
+    svg {
+        margin-right: 20px;
+    }
+    input {
+        font-weight: 400;
+        font-size: 12px;
+        color: #7d7b78;
+        height: 20px;
+        max-width: 180px;
+        padding-right: 20px;
+        width: 100%;
+        background: #faf7f0;
+        border-bottom: 1px solid #98a8f8;
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+    button {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 16px;
+        height: 10px;
+        background-color: #faf7f0;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.01875 0.706238L11.8125 4.49999L8.01875 8.29374M1.1875 4.49999H11.7062' stroke='%2398A8F8' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+}

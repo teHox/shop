@@ -1,0 +1,34 @@
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    p {
+        font-weight: 400;
+    }
+}
+
+.itemReverse {
+    flex-direction: row-reverse;
+}
+
+.line {
+    width: 1px;
+    height: 110px;
+    background: #98a8f8;
+}
