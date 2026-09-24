@@ -1,12 +1,13 @@
-import { FC, memo } from "react";
-import MainLayout from "../layout/MainLayout/MainLayout.tsx";
-import BannerMobile from "../components/BannerMobile/BannerMobile.tsx";
+import { FC } from "react";
+import MainLayout from "../../layout/MainLayout/MainLayout.tsx";
+import BannerMobile from "../../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";
-import Categories from "../components/categories/Categories.tsx";
+import Categories from "./components/Categories/Categories.tsx";
+import { mobileMediaWidth } from "../../constants/constants.ts";
 
 const CatalogPage: FC = () => {
     const isMobile = useMediaQuery({
-        query: "(max-width: 768px)",
+        query: mobileMediaWidth,
     });
 
     return (
@@ -27,4 +28,4 @@ const CatalogPage: FC = () => {
     );
 };
 
-export default memo(CatalogPage);
+export default CatalogPage;

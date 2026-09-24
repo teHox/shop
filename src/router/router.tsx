@@ -4,7 +4,7 @@ import AboutUsPage from "../pages/AboutUs/AboutUs.tsx";
 import ProductPage from "../pages/Product/Product.tsx";
 import ConsultationPage from "../pages/Consultation/Consultation.tsx";
 import BasketPage from "../pages/Basket.tsx";
-import CatalogPage from "../pages/Catalog.tsx";
+import CatalogPage from "../pages/Catalog/Catalog.tsx";
 
 const routes = [
     { path: "/", element: <HomePage /> },
