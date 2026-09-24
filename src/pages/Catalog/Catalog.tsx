@@ -4,6 +4,7 @@ import BannerMobile from "../../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";
 import Categories from "./components/Categories/Categories.tsx";
 import { mobileMediaWidth } from "../../constants/constants.ts";
+import Search from "../../components/Search/Search.tsx";
 
 const CatalogPage: FC = () => {
     const isMobile = useMediaQuery({
@@ -15,12 +16,7 @@ const CatalogPage: FC = () => {
             {isMobile && (
                 <>
                     <BannerMobile />
-                    <input
-                        type="search"
-                        className="search-mobile"
-                        name="seacrh-mobile"
-                        placeholder="Пошук ..."
-                    />
+                    <Search />
                     <Categories />
                 </>
             )}

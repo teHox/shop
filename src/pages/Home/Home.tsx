@@ -5,6 +5,7 @@ import BannerMobile from "../../components/BannerMobile/BannerMobile.tsx";
 import { useMediaQuery } from "react-responsive";
 import Catalog from "./components/Catalog/Catalog.tsx";
 import { mobileMediaWidth } from "../../constants/constants.ts";
+import Search from "../../components/Search/Search.tsx";
 
 const HomePage: FC = () => {
     const isMobile = useMediaQuery({
@@ -14,14 +15,7 @@ const HomePage: FC = () => {
     return (
         <MainLayout>
             {isMobile ? <BannerMobile /> : <Banner />}
-            {isMobile && (
-                <input
-                    type="search"
-                    className="search-mobile"
-                    name="seacrh-mobile"
-                    placeholder="Пошук ..."
-                />
-            )}
+            {isMobile && <Search />}
             <Catalog />
         </MainLayout>
     );

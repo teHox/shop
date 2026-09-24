@@ -1,5 +1,5 @@
 import { FC } from "react";
-import CategoriesSvg from "../svg/CategoriesSvg.tsx";
+import CategoriesSvg from "../../svg/CategoriesSvg.tsx";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import { textTypes } from "../../../../constants/constants.ts";
 import styles from "./styles.module.scss";

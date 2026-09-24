@@ -69,7 +69,11 @@ const ConsultationPage: FC = () => {
                                 cols={10}
                                 rows={2}
                                 placeholder="Ваше повідомлення"></textarea>
-                            <input className="medium" type="button" value="Надіслати" />
+                            <input
+                                className={styles.formBtn}
+                                type="button"
+                                value="Надіслати"
+                            />
                         </form>
                     </div>
                 </div>
