@@ -51,7 +51,7 @@ const Catalog: FC = () => {
             </div>
             <div className={styles.catalog}>
                 {items.map((item) => (
-                    <CatalogItem item={item} />
+                    <CatalogItem item={item} key={item.id} />
                 ))}
             </div>
         </div>
