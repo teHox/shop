@@ -64,10 +64,6 @@ const HeaderMenu: FC = () => {
     const location = useLocation();
     const { isMenuActive, setIsMenuActive } = useUIStore();
 
-    const handleChangeBurger = () => {
-        setIsMenuActive(!isMenuActive);
-    };
-
     useEffect(() => {
         setIsMenuActive(location.pathname === "/");
     }, [location.pathname]);
@@ -86,7 +82,7 @@ const HeaderMenu: FC = () => {
             <div className={styles.category}>
                 <TextElement content={"Наші Категорії"} className={styles.title} />
                 <BurgerBtn
-                    handleChangeBurger={handleChangeBurger}
+                    handleChangeBurger={() => setIsMenuActive(!isMenuActive)}
                     burgerActive={isMenuActive}
                 />
                 <div
