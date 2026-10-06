@@ -1,9 +1,10 @@
-import { FC, useState } from "react";
+import { FC, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import BurgerBtn from "../BurgerBtn/BurgerBtn.tsx";
+import { useUIStore } from "../../../../store/ui/useUIStore.ts";
 
 const menuList = [
     {
@@ -61,11 +62,15 @@ const categoryList = [
 
 const HeaderMenu: FC = () => {
     const location = useLocation();
-    const [burgerActive, setBurgerActive] = useState(location.pathname === "/");
+    const { isMenuActive, setIsMenuActive } = useUIStore();
 
     const handleChangeBurger = () => {
-        setBurgerActive((prevState) => !prevState);
+        setIsMenuActive(!isMenuActive);
     };
+
+    useEffect(() => {
+        setIsMenuActive(location.pathname === "/");
+    }, [location.pathname]);
 
     return (
         <nav className={styles.menu}>
@@ -82,11 +87,11 @@ const HeaderMenu: FC = () => {
                 <TextElement content={"Наші Категорії"} className={styles.title} />
                 <BurgerBtn
                     handleChangeBurger={handleChangeBurger}
-                    burgerActive={burgerActive}
+                    burgerActive={isMenuActive}
                 />
                 <div
                     className={clsx(styles.content, {
-                        [styles.contentActive]: burgerActive,
+                        [styles.contentActive]: isMenuActive,
                     })}>
                     {categoryList.map((item) => (
                         <a href={item.link} className={styles.item}>

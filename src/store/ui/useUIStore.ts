@@ -1,7 +1,8 @@
 import { create } from "zustand/react";
 
 interface UIStoreState {
-    isMenuOpen: boolean;
+    isMenuActive: boolean;
+    setIsMenuActive: (value: boolean) => void;
     isBasketModalActive: boolean;
     setIsBasketModalActive: (value: boolean) => void;
     isConsultationModalActive: boolean;
@@ -9,10 +10,11 @@ interface UIStoreState {
 }
 
 export const useUIStore = create<UIStoreState>()((set) => ({
-    isMenuOpen: true,
+    isMenuActive: false,
+    setIsMenuActive: (value: boolean) => set({ isMenuActive: value }),
     isBasketModalActive: false,
-    isConsultationModalActive: false,
     setIsBasketModalActive: (value: boolean) => set({ isBasketModalActive: value }),
+    isConsultationModalActive: false,
     setIsConsultationModalActive: (value: boolean) =>
         set({ isConsultationModalActive: value }),
 }));
