@@ -1,29 +1,18 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { FC } from "react";
 import PopupBasketItem from "../BasketItem/BasketItem.tsx";
 import Modal from "../../../../components/Modal/Modal.tsx";
 import styles from "./styles.module.scss";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import { textTypes } from "../../../../constants/constants.ts";
+import { useUIStore } from "../../../../store/ui/useUIStore.ts";
 
-type BasketModalProps = {
-    isVisible: boolean;
-    setIsVisible: Dispatch<SetStateAction<boolean>>;
-    basketActive: boolean;
-    setBasketActive: Dispatch<SetStateAction<boolean>>;
-};
+const BasketModal: FC = () => {
+    const { isBasketModalActive, setIsBasketModalActive } = useUIStore();
 
-const BasketModal: FC<BasketModalProps> = ({
-    isVisible,
-    setIsVisible,
-    basketActive,
-    setBasketActive,
-}) => {
     return (
         <Modal
-            isModalVisible={isVisible}
-            setIsModalVisible={setIsVisible}
-            isModalActive={basketActive}
-            setIsModalActive={setBasketActive}>
+            isModalActive={isBasketModalActive}
+            setIsModalActive={setIsBasketModalActive}>
             <div className={styles.content}>
                 <div className={styles.catalog}>
                     <PopupBasketItem />
@@ -38,7 +27,7 @@ const BasketModal: FC<BasketModalProps> = ({
                 </div>
                 <div className={styles.buttons}>
                     <TextElement
-                        onClick={() => setBasketActive((prev) => !prev)}
+                        onClick={() => setIsBasketModalActive(false)}
                         content={"Продовжити покупки"}
                         className={styles.close}
                         type={textTypes.medium}

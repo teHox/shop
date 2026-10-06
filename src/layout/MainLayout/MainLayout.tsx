@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode } from "react";
 import Footer from "./components/Footer/Footer.tsx";
 import { useMediaQuery } from "react-responsive";
 import { mobileMediaWidth } from "../../constants/constants.ts";
@@ -15,35 +15,14 @@ const MainLayout: FC<TypeMainLayout> = ({ children }) => {
     const isMobile = useMediaQuery({
         query: mobileMediaWidth,
     });
-    const [consultationActive, setConsultationActive] = useState(false);
-    const [basketActive, setBasketActive] = useState(false);
-    const [isVisibleConsultation, setIsVisibleConsultation] = useState(false);
-    const [isVisibleBasket, setIsVisibleBasket] = useState(false);
 
     return (
         <div>
             <div className={styles.line}></div>
             <div className={styles.container}>
-                {isMobile || (
-                    <Header
-                        setConsultationActive={setConsultationActive}
-                        setIsVisibleConsultation={setIsVisibleConsultation}
-                        setIsVisibleBasket={setIsVisibleBasket}
-                        setBasketActive={setBasketActive}
-                    />
-                )}
-                <ConsultationModal
-                    isVisible={isVisibleConsultation}
-                    setIsVisible={setIsVisibleConsultation}
-                    consultationActive={consultationActive}
-                    setConsultationActive={setConsultationActive}
-                />
-                <BasketModal
-                    isVisible={isVisibleBasket}
-                    setIsVisible={setIsVisibleBasket}
-                    basketActive={basketActive}
-                    setBasketActive={setBasketActive}
-                />
+                {isMobile || <Header />}
+                <ConsultationModal />
+                <BasketModal />
                 {children}
                 {isMobile && <Footer />}
             </div>
