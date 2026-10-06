@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { FC } from "react";
 import { FaInstagram, FaViber, FaWhatsapp } from "react-icons/fa";
 import Modal from "../../../../components/Modal/Modal.tsx";
 import TelegramSvg from "../../../../assets/svg/TelegramSvg/TelegramSvg.tsx";
@@ -6,26 +6,15 @@ import styles from "./styles.module.scss";
 import TextElement from "../../../../components/TextElement/TextElement.tsx";
 import { textTypes } from "../../../../constants/constants.ts";
 import clsx from "clsx";
+import { useUIStore } from "../../../../store/ui/useUIStore.ts";
 
-type ConsultationModalProps = {
-    isVisible: boolean;
-    setIsVisible: Dispatch<SetStateAction<boolean>>;
-    consultationActive: boolean;
-    setConsultationActive: Dispatch<SetStateAction<boolean>>;
-};
+const ConsultationModal: FC = () => {
+    const { isConsultationModalActive, setIsConsultationModalActive } = useUIStore();
 
-const ConsultationModal: FC<ConsultationModalProps> = ({
-    isVisible,
-    setIsVisible,
-    consultationActive,
-    setConsultationActive,
-}) => {
     return (
         <Modal
-            isModalVisible={isVisible}
-            setIsModalVisible={setIsVisible}
-            isModalActive={consultationActive}
-            setIsModalActive={setConsultationActive}>
+            isModalActive={isConsultationModalActive}
+            setIsModalActive={setIsConsultationModalActive}>
             <div className={styles.content}>
                 <div className={styles.left}>
                     <TextElement
